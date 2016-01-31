@@ -180,31 +180,32 @@
 
 
 # 数据库查询
-import MySQLdb
-
-
-db = MySQLdb.connect('localhost', 'root', '123', 'TESTDB')
-
-cursor = db.cursor()
-
-sql = "SELECT * FROM EMPLOYEE WHERE INCOME > 1000"
-
-try:
-    cursor.execute(sql)
-
-    result = cursor.fetchall()
-    for row in result:
-        fname = row[0]
-        lname = row[1]
-        age = row[2]
-        sex = row[3]
-        income = row[4]
-
-        print(fname, lname, age, sex, income)
-except:
-    print('ERROR!')
-
-db.close()
+# >>>>>>>>>> python2.7 <<<<<<<<<<
+# import MySQLdb
+#
+#
+# db = MySQLdb.connect('localhost', 'root', '123', 'TESTDB')
+#
+# cursor = db.cursor()
+#
+# sql = "SELECT * FROM EMPLOYEE WHERE INCOME > 1000"
+#
+# try:
+#     cursor.execute(sql)
+#
+#     result = cursor.fetchall()
+#     for row in result:
+#         fname = row[0]
+#         lname = row[1]
+#         age = row[2]
+#         sex = row[3]
+#         income = row[4]
+#
+#         print(fname, lname, age, sex, income)
+# except:
+#     print('ERROR!')
+#
+# db.close()
 
 
 
@@ -273,30 +274,61 @@ db.close()
 # print(a)
 
 
-phone_book = {
-    'Alex':{
-        'phone':'123',
-        'adrr':'ningbo'
-    },
+# phone_book = {
+#     'Alex':{
+#         'phone':'123',
+#         'adrr':'ningbo'
+#     },
+#
+#     'MAR':{
+#         'phone':'15757870527',
+#         'addr':'anhui'
+#     },
+#
+#     'MT':{
+#         'phone':'15726816113',
+#         'addr':'hangzhou'
+#     }
+#
+# }
+# name = input('Input your name:\n')
+# print(phone_book[name]['phone'])
+# print(phone_book[name]['addr'])
 
-    'MAR':{
-        'phone':'15757870527',
-        'addr':'anhui'
-    },
+# update
+# MT = {
+#    'phone':'15726816113',
+#    'addr':'hangzhou',
+#     'nickname':'mtt'
+# }
+# print('old dict:', MT)
+#
+# ph = {'phone':'15555555'}
+# MT.update(ph)
+# print('new dict:', MT)
 
-    'MT':{
-        'phone':'15726816113',
-        'addr':'hangzhou'
-    }
 
+# popitem 移除(弹出)字典中随机一项
+
+MT = {
+    'phone':'15726816113',
+    'addr':'hangzhou',
+    'nickname':'mtt',
+    'school':'NIT'
 }
-name = input('Input your name:\n')
-print(phone_book[name]['phone'])
-print(phone_book[name]['addr'])
+# print('old dict:', MT)
+num = len(MT)
+print(num)
+i = 0
+while i < num:
+    print(i, MT)
+    MT.popitem()
+    i += 1
 
-
-
-
-
-
-
+print('new dict:', MT)
+# print('移除的项1:', MT.popitem())
+# print('new dict1', MT)
+# print('移除的项2:', MT.popitem())
+# print('new dict2', MT)
+# print('移除的项3:', MT.popitem())
+# print('new dict3', MT)
