@@ -1,9 +1,9 @@
-
-album = ['Black', 'Back', 'Kill', 24, True]
-album.append('MAR')
-print(album)
-print(album[0])
-print(album[-1])
+#
+# album = ['Black', 'Back', 'Kill', 24, True]
+# album.append('MAR')
+# print(album)
+# print(album[0])
+# print(album[-1])
 
 
 # if语句
@@ -107,6 +107,97 @@ print(album[-1])
 # c = random.randrange(1, 7)
 #
 # print(a, b, c)
+
+
+
+
+# >>>>>>>>>>>>>>>>>>>> python foundation <<<<<<<<<<<<<<<<<<<<
+
+#
+# d = {
+#     'name':'JJ',
+#     'skill':'no-dead',
+#     'keyi':'ky'
+# }
+# # d.pop('keyi')
+# # print(d)
+#
+# List = list('fuckyou')
+# # print(List)
+#
+# from string import Template
+#
+# words = Template('Everything will be $x')
+# word = words.substitute(x = 'ok')
+# print(word)
+#
+#
+# def getpage():
+#     return None
+# import math
+#
+# print(math.pi)
+
+
+# name = 'This is my way'
+# name = name.replace('my', 'your')
+# print(name)
+
+# a = 'foot'
+# b = 'ball'
+# c = a + b
+# print(c)
+
+# name = input('What is your name?\n')
+# if name.endswith('Mar'):
+#     print('Hello Mr.Mar!')
+
+# word = ['my', 'name', 'is', 'your', 'dad']
+# number = ['139', '123', '234', '4555', '666']
+# for w in word:
+#     print(w)
+# print(word.index('my'))
+# num = number[word.index('name')]
+# print(num)
+
+# from pip._vendor.distlib.compat import raw_input
+#
+# while True:
+#     word = raw_input('Enter a word: \n')
+#     if not word: break
+#     print('Your word is ' + word)
+
+# def chage_name(n):
+#     n = 'Mr.J'
+
+
+# a = [1, 2, 3, 4]
+# a.append(0)
+# print(a)
+
+
+phone_book = {
+    'Alex':{
+        'phone':'123',
+        'adrr':'ningbo'
+    },
+
+    'MAR':{
+        'phone':'15757870527',
+        'addr':'anhui'
+    },
+
+    'MT':{
+        'phone':'15726816113',
+        'addr':'hangzhou'
+    }
+
+}
+name = input('Input your name:\n')
+print(phone_book[name]['phone'])
+print(phone_book[name]['addr'])
+
+
 
 
 
