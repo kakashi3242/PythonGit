@@ -100,6 +100,9 @@
 # account_login()
 
 
+# >>>>>>>>>>>>>>>>>>>> python 数据库操作 <<<<<<<<<<<<<<<<<<<<
+
+
 # import random
 #
 # a = random.randrange(1, 7)
@@ -108,6 +111,100 @@
 #
 # print(a, b, c)
 
+# coding=utf-8
+
+
+# 连接数据库
+# import MySQLdb
+#
+#
+# db = MySQLdb.connect("localhost", "root", "123", "TESTDB" )
+#
+# cursor = db.cursor()
+#
+# cursor.execute("SELECT VERSION()")
+#
+# data = cursor.fetchone()
+#
+# print "Database version : %s " % data
+#
+# db.close()
+
+
+# 数据库建表
+# import MySQLdb
+#
+# # 打开数据库连接
+# db = MySQLdb.connect("localhost", "root", "123", "TESTDB" )
+#
+# # 使用cursor()方法获取操作游标
+# cursor = db.cursor()
+#
+# # 如果数据表已经存在使用 execute() 方法删除表。
+# cursor.execute("DROP TABLE IF EXISTS EMPLOYEE")
+#
+# # 创建数据表SQL语句
+# sql = """CREATE TABLE EMPLOYEE (
+#          FIRST_NAME  CHAR(20) NOT NULL,
+#          LAST_NAME  CHAR(20),
+#          AGE INT,
+#          SEX CHAR(1),
+#          INCOME FLOAT )"""
+#
+# cursor.execute(sql)
+#
+# # 关闭数据库连接
+# db.close()
+
+
+# 数据库插入
+# import MySQLdb
+#
+#
+# db = MySQLdb.connect('localhost', 'root', '123', 'TESTDB')
+#
+# cursor = db.cursor()
+#
+# sql = """insert into EMPLOYEE(FIRST_NAME,
+#          LAST_NAME, AGE, SEX, INCOME)
+#          VALUES ('Mar', 'Mark', 18, 'M', 2800)"""
+#
+# try:
+#     cursor.execute(sql)
+#     db.commit()
+#     print('Done')
+# except:
+#     db.rollback()
+#
+# db.close()
+
+
+# 数据库查询
+import MySQLdb
+
+
+db = MySQLdb.connect('localhost', 'root', '123', 'TESTDB')
+
+cursor = db.cursor()
+
+sql = "SELECT * FROM EMPLOYEE WHERE INCOME > 1000"
+
+try:
+    cursor.execute(sql)
+
+    result = cursor.fetchall()
+    for row in result:
+        fname = row[0]
+        lname = row[1]
+        age = row[2]
+        sex = row[3]
+        income = row[4]
+
+        print(fname, lname, age, sex, income)
+except:
+    print('ERROR!')
+
+db.close()
 
 
 
