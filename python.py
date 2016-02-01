@@ -310,25 +310,64 @@
 
 # popitem 移除(弹出)字典中随机一项
 
-MT = {
-    'phone':'15726816113',
-    'addr':'hangzhou',
-    'nickname':'mtt',
-    'school':'NIT'
-}
+# MT = {
+#     'phone':'15726816113',
+#     'addr':'hangzhou',
+#     'nickname':'mtt',
+#     'school':'NIT'
+# }
 # print('old dict:', MT)
-num = len(MT)
-print(num)
-i = 0
-while i < num:
-    print(i, MT)
-    MT.popitem()
-    i += 1
+# num = len(MT)
+# print(num)
+# i = 0
+# 逐项移除
+# while i < num:
+#     print(i, MT)
+#     MT.popitem()
+#     i += 1
 
-print('new dict:', MT)
+# print('new dict:', MT)
 # print('移除的项1:', MT.popitem())
 # print('new dict1', MT)
 # print('移除的项2:', MT.popitem())
 # print('new dict2', MT)
 # print('移除的项3:', MT.popitem())
 # print('new dict3', MT)
+
+
+# >>>>>>>>>> chapter 5 <<<<<<<<<<
+
+# for i in range(10):
+#     print(i)
+#     i += 1
+
+# name = ''
+# while not name or name.isspace():
+#     name = input('Input your name :')
+# print('Hello %s' % name)
+
+# 并行迭代
+# name = ['JJ', 'KK', 'MM', 'TT']
+# age = [12, 15, 16, 22]
+
+# for i in range(len(name)):
+#     print(name[i] + "'s age is " + str(age[i]) )
+# zz = zip(name, age)
+# print(zz)
+
+# zip解包元组
+# name = ['JJ', 'KK', 'MM', 'TT']
+# age = [12, 15, 16, 22]
+#
+# for name, age in zip(name, age):
+#     print(name + "'s age is " + str(age))
+
+while True:
+    name = input('Input your name:')
+    if not name:
+        break
+    print('Your name is ', name)
+
+
+
+
