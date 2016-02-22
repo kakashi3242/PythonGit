@@ -118,6 +118,84 @@
 #     print ('data error')
 
 
+# 9.题目：取一个整数a从右端开始的4～7位。
+
+# a = 100
+# print(100&0x00F0)
+
+
+# 10.画圆
+
+# No module named 'Tkinter'
+
+# if __name__ == '__main__':
+#      from Tkinter import *
+#
+#      canvas = Canvas(width=800, height=600, bg='red')
+#      canvas.pack(expand=YES, fill=BOTH)
+#      k = 1
+#      j = 1
+#      for i in range(0,26):
+#          canvas.create_oval(310 - k,250 - k,310 + k,250 + k, width=1)
+#          k += j
+#          j += 0.3
+#
+#      mainloop()
+
+
+# 11.查找字符串
+
+# str1 = 'ni shi wo er zi'
+# str2 = 'er'
+# print(str1.find(str2))
+# 找到的是str2在str1中的位置
+
+
+# 12.求一个字符串的长度
+
+# string = input('请输入一段字符串:\n')
+# lenth = len(string)
+# print(lenth)
+
+
+# 13.编写一个函数，输入n为偶数时，调用函数求1/2+1/4+...+1/n,当输入n为奇数时，调用函数1/1+1/3+...+1/n(利用指针函数)
+
+# 为奇数
+def odd(n):
+    s = 0.0
+    for i in range(1, n + 1, 2):
+        s += 1/i
+    return s
+
+# 为偶数
+def even(n):
+    s = 0.0
+    for i in range(2, n + 1, 2):
+        s += 1.0/i
+    return s
+
+def dcall(fp,n):
+    s = fp(n)
+    return s
+
+if __name__ == '__main__':
+    n = int(input('Input the n\n'))
+    if n % 2 == 0:
+        sum = dcall(even, n)
+    else:
+        sum = dcall(odd, n)
+    print(sum)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
