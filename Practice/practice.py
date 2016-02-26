@@ -161,30 +161,30 @@
 # 13.编写一个函数，输入n为偶数时，调用函数求1/2+1/4+...+1/n,当输入n为奇数时，调用函数1/1+1/3+...+1/n(利用指针函数)
 
 # 为奇数
-def odd(n):
-    s = 0.0
-    for i in range(1, n + 1, 2):
-        s += 1/i
-    return s
-
-# 为偶数
-def even(n):
-    s = 0.0
-    for i in range(2, n + 1, 2):
-        s += 1.0/i
-    return s
-
-def dcall(fp,n):
-    s = fp(n)
-    return s
-
-if __name__ == '__main__':
-    n = int(input('Input the n\n'))
-    if n % 2 == 0:
-        sum = dcall(even, n)
-    else:
-        sum = dcall(odd, n)
-    print(sum)
+# def odd(n):
+#     s = 0.0
+#     for i in range(1, n + 1, 2):
+#         s += 1/i
+#     return s
+#
+# # 为偶数
+# def even(n):
+#     s = 0.0
+#     for i in range(2, n + 1, 2):
+#         s += 1.0/i
+#     return s
+#
+# def dcall(fp,n):
+#     s = fp(n)
+#     return s
+#
+# if __name__ == '__main__':
+#     n = int(input('Input the n:\n'))
+#     if n % 2 == 0:
+#         sum = dcall(even, n)
+#     else:
+#         sum = dcall(odd, n)
+#     print(sum)
 
 
 
