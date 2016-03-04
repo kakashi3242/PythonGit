@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - TESTDB@localhost" uuid="fee9f80b-ba39-4522-abf6-f7e79f93b782">
+    <database-info product="MySQL" version="5.7.9" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="TESTDB"/>
+      <table id="2" parent="1" name="EMPLOYEE"/>
+      <column id="3" parent="2" name="FIRST_NAME">
+        <mandatory>1</mandatory>
+        <data-type>char(20)</data-type>
+      </column>
+      <column id="4" parent="2" name="LAST_NAME">
+        <data-type>char(20)</data-type>
+      </column>
+      <column id="5" parent="2" name="AGE">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="6" parent="2" name="SEX">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="7" parent="2" name="INCOME">
+        <data-type>float</data-type>
+      </column>
+    </database-model>
+  </data-source>
+</component>
