@@ -181,15 +181,19 @@
 
 # 数据库查询
 # >>>>>>>>>> python2.7 <<<<<<<<<<
-# import MySQLdb
+# import pymysql
 #
 #
-# db = MySQLdb.connect('localhost', 'root', '123', 'TESTDB')
+# db = pymysql.connect(db='python', user='root', passwd='123', host='127.0.0.1', port=3306)
 #
 # cursor = db.cursor()
 #
 # sql = "SELECT * FROM EMPLOYEE WHERE INCOME > 1000"
 #
+# cursor.execute(sql)
+# result = cursor.fetchall()
+# print(result)
+
 # try:
 #     cursor.execute(sql)
 #
@@ -204,8 +208,8 @@
 #         print(fname, lname, age, sex, income)
 # except:
 #     print('ERROR!')
-#
-# db.close()
+
+db.close()
 
 
 
@@ -362,11 +366,11 @@
 # for name, age in zip(name, age):
 #     print(name + "'s age is " + str(age))
 
-while True:
-    name = input('Input your name:')
-    if not name:
-        break
-    print('Your name is ', name)
+# while True:
+#     name = input('Input your name:')
+#     if not name:
+#         break
+#     print('Your name is ', name)
 
 
 
