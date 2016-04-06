@@ -209,7 +209,7 @@
 # except:
 #     print('ERROR!')
 
-db.close()
+# db.close()
 
 
 
@@ -371,6 +371,30 @@ db.close()
 #     if not name:
 #         break
 #     print('Your name is ', name)
+
+
+# 以下的代码的输出将是什么? 说出你的答案并解释？
+# def extenList(val, list=[]):
+#     list.append(val)
+#     return list
+#
+# list1 = extenList(10)
+# list2 = extenList(13, [])
+# list3 = extenList('aa')
+#
+# print(list1)
+# print(list2)
+# print(list3)
+# 因为没有指定list,list1和list3实际上是在操作同一个list
+
+
+# >>>>>>>>>> chapter 6 <<<<<<<<<<
+
+
+
+
+
+
 
 
 
